@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #050a06;
+  --color-foreground: #d1d5db;
+  --color-primary: #10b981;
+  --color-secondary: #064e3b;
+  --color-accent: #fbbf24;
+}
+
+:root {
+  --background: #050a06;
+  --foreground: #d1d5db;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.arabic-text {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+}
+
+.btn-primary {
+  @apply bg-primary hover:bg-emerald-600 text-black font-bold py-3 px-6 rounded-lg transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2;
+}
+
+.input-field {
+  @apply bg-white/5 border border-white/10 rounded-lg p-3 outline-none focus:border-primary transition-colors;
+}
